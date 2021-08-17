@@ -1,0 +1,36 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background-color: #055f58;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+}
+
+.brand {
+  text-decoration: none;
+  color: white;
+}
+
+.brand:hover {
+  color: rgb(218, 209, 209);
+}
+
+.navbarButton {
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: inherit;
+  font: inherit;
+  font-weight: bold;
+  font-size: 1.17em;
+}
+
+.navbarButton:hover {
+  cursor: pointer;
+}

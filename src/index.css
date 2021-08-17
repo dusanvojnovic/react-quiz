@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(144, 218, 218);
+  font-family: 'Gowun Dodum', 'Verdana', sans-serif;
+}
