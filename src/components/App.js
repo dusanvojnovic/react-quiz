@@ -1,14 +1,15 @@
 import { Route, Switch } from 'react-router-dom';
 
-import historyImg from '../assets/history.jpg';
-import geographyImg from '../assets/geography.jpg';
-import sportImg from '../assets/sport.jpg';
-import moviesImg from '../assets/movies.jpg';
-import musicImg from '../assets/music.jpg';
-import generalImg from '../assets/general.jpg';
+import historyImg from '../assets/history-bg.png';
+import geographyImg from '../assets/geography-bg.png';
+import sportImg from '../assets/sport-bg.png';
+import moviesImg from '../assets/movies-bg.png';
+import musicImg from '../assets/music-bg.png';
+import generalImg from '../assets/general-bg.png';
 
-import AvailableSections from './AvailableSections/AvailableSections';
+import QuizSections from './QuizSections/QuizSections';
 import Header from './Header/Header';
+import Instructions from '../pages/Instructions/Instructions';
 import Quiz from './Quiz/Quiz';
 
 const App = () => {
@@ -17,7 +18,10 @@ const App = () => {
       <Header />
       <Switch>
         <Route path="/" exact>
-          <AvailableSections />
+          <QuizSections />
+        </Route>
+        <Route path="/instrucions">
+          <Instructions />
         </Route>
         <Route path="/history">
           <Quiz section="23" imagePath={historyImg} />

@@ -59,37 +59,44 @@ const Quiz = (props) => {
 
   return (
     <div
-      className={classes.mainSection}
       style={{
-        background: `url(${props.imagePath}) no-repeat center fixed`,
-        backgroundSize: 'cover',
+        background: `url(${props.imagePath}) no-repeat center center fixed`,
+        backgroundPosition: 'center',
+        backgroundSize: '100% 100%',
+        width: '100%',
+        height: '100%',
       }}
     >
-      <h1>
-        {questionIndex + 1 < 11 ? (
-          `Question number ${questionIndex + 1}`
-        ) : (
-          <Modal>THE END You had {numOfCorrectAnswers} correct answers!</Modal>
-        )}
-      </h1>
+      <div className={classes.mainSection}>
+        <h1>
+          {questionIndex + 1 < 11 ? (
+            `Question number ${questionIndex + 1}`
+          ) : (
+            <Modal>
+              THE END You had {numOfCorrectAnswers} correct answers!
+            </Modal>
+          )}
+        </h1>
 
-      {/* <CountdownTimer
+        {/* <CountdownTimer
         getNextQuestion={() => setQuestionIndex(questionIndex + 1)}
       /> */}
-      <h2>{questionIndex + 1 < 11 && questionsList[questionIndex]}</h2>
-      <div className={classes.buttons}>
-        <Button
-          text="True"
-          onButtonClicked={() =>
-            onButtonClicked(correctAnswers[questionIndex], 'True')
-          }
-        />
-        <Button
-          onButtonClicked={() =>
-            onButtonClicked(correctAnswers[questionIndex], 'False')
-          }
-          text="False"
-        />
+        <h2>{questionIndex + 1 < 11 && questionsList[questionIndex]}</h2>
+
+        <div className={classes.buttons}>
+          <Button
+            text="true"
+            onButtonClicked={() =>
+              onButtonClicked(correctAnswers[questionIndex], 'True')
+            }
+          />
+          <Button
+            onButtonClicked={() =>
+              onButtonClicked(correctAnswers[questionIndex], 'False')
+            }
+            text="false"
+          />
+        </div>
       </div>
     </div>
   );

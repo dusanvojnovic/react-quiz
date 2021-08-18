@@ -6,5 +6,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 14rem 10rem;
+  padding: 3rem 10rem;
+}
+
+.title {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 50%;
+  margin: 3rem auto;
 }

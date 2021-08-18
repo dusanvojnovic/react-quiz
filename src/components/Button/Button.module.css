@@ -1,11 +1,20 @@
 .button {
-  background-color: rgb(24, 129, 148);
-  color: antiquewhite;
-  width: 6rem;
-  height: 3rem;
+  background-color: rgb(221, 213, 202);
+  color: black;
+  font-size: 1.2rem;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  width: 9rem;
+  height: 5rem;
+  margin: 1rem;
   border-radius: 15px;
 }
 
 .button:hover {
-  border: 3px solid antiquewhite;
+  cursor: pointer;
+  box-shadow: 1px 3px 5px 2px rgb(94, 91, 91);
 }
+
+/* .button:focus {
+  background-color: rgb(204, 172, 128);
+} */

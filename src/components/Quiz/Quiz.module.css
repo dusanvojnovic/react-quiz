@@ -1,28 +1,25 @@
 .mainSection {
   display: flex;
+  color: rgb(240, 233, 233);
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  padding: 4rem;
+  padding: 3rem;
 }
 
 .mainSection h2 {
-  display: flex;
+  /* display: flex; */
   text-align: center;
-  align-items: center;
-  background-color: rgb(174, 199, 199);
-  border: 4px solid black;
-  padding: 5rem;
-  margin: 4rem;
-  border-radius: 10px;
-  width: 30%;
-  height: 28rem;
+  padding: 3rem 0.5rem;
+  margin: 9.5rem;
+  font-size: 2.5rem;
+  color: rgb(222, 239, 241);
+  width: 50%;
+  height: 18rem;
 }
 
 h1 {
-  background-color: rgb(174, 199, 199);
-  border: 3px solid black;
   padding: 2rem;
 }
 /* 
@@ -40,12 +37,14 @@ h1 {
 } */
 
 .buttons {
-  width: 20rem;
   display: flex;
   justify-content: space-between;
+  padding: 0.5rem;
+  margin-right: 16px;
+  width: 35%;
 }
 
-.questionFalse {
+/* .questionFalse {
   animation: blink-false 500ms;
   background-color: blue;
 }
@@ -64,4 +63,4 @@ h1 {
   50% {
     border-color: blue;
   }
-}
+} */
