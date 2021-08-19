@@ -6,7 +6,12 @@ import Button from '../Button/Button';
 import classes from './Modal.module.css';
 
 const Backdrop = (props) => {
-  return <div className={classes.backdrop} />;
+  const history = useHistory();
+
+  const goToHomePage = () => {
+    history.push('/');
+  };
+  return <div className={classes.backdrop} onClick={goToHomePage} />;
 };
 
 const ModalOverlay = (props) => {

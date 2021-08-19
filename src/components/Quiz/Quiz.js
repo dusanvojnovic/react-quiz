@@ -73,7 +73,8 @@ const Quiz = (props) => {
             `Question number ${questionIndex + 1}`
           ) : (
             <Modal>
-              THE END You had {numOfCorrectAnswers} correct answers!
+              <h2>GAME OVER</h2>
+              <h4> You had {numOfCorrectAnswers} correct answers!</h4>
             </Modal>
           )}
         </h1>
