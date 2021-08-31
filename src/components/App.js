@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import historyImg from '../assets/history-bg.png';
@@ -11,37 +12,41 @@ import QuizSections from './QuizSections/QuizSections';
 import Header from './Header/Header';
 import Instructions from '../pages/Instructions/Instructions';
 import Quiz from './Quiz/Quiz';
+import OptionProvider from '../store/OptionProvider';
+// import OptionContext from '../store/option-context';
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <Switch>
-        <Route path="/" exact>
-          <QuizSections />
-        </Route>
-        <Route path="/instrucions">
-          <Instructions />
-        </Route>
-        <Route path="/history">
-          <Quiz section="23" imagePath={historyImg} />
-        </Route>
-        <Route path="/geography">
-          <Quiz section="22" imagePath={geographyImg} />
-        </Route>
-        <Route path="/sport">
-          <Quiz section="21" imagePath={sportImg} />
-        </Route>
-        <Route path="/movies">
-          <Quiz section="11" imagePath={moviesImg} />
-        </Route>
-        <Route path="/music">
-          <Quiz section="12" imagePath={musicImg} />
-        </Route>
-        <Route path="/general">
-          <Quiz section="9" imagePath={generalImg} />
-        </Route>
-      </Switch>
+      <OptionProvider>
+        <Header />
+        <Switch>
+          <Route path="/" exact>
+            <QuizSections />
+          </Route>
+          <Route path="/instrucions">
+            <Instructions />
+          </Route>
+          <Route path="/history">
+            <Quiz section="23" imagePath={historyImg} />
+          </Route>
+          <Route path="/geography">
+            <Quiz section="22" imagePath={geographyImg} />
+          </Route>
+          <Route path="/sport">
+            <Quiz section="21" imagePath={sportImg} />
+          </Route>
+          <Route path="/movies">
+            <Quiz section="11" imagePath={moviesImg} />
+          </Route>
+          <Route path="/music">
+            <Quiz section="12" imagePath={musicImg} />
+          </Route>
+          <Route path="/general">
+            <Quiz section="9" imagePath={generalImg} />
+          </Route>
+        </Switch>
+      </OptionProvider>
     </div>
   );
 };
