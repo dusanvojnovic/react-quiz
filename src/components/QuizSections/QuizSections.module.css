@@ -15,4 +15,67 @@
   font-size: 1.5rem;
   width: 50%;
   margin: 3rem auto;
+  line-height: 4.5rem;
+}
+
+.modal {
+  padding: 6rem 3rem 12rem;
+  line-height: 4rem;
+}
+
+@media (max-width: 40rem) {
+  .title {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .sections {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(2, 150px);
+    grid-gap: 10px 40px;
+    padding: 6rem;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .title {
+    font-size: 0.7rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .sections {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 150px);
+    grid-gap: 10px 40px;
+    padding: 1rem 2rem 0 2rem;
+    margin: 1rem 0.1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .title {
+    font-size: 0.6rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .sections {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 150px);
+    grid-gap: 5px 20px;
+    padding: 1rem;
+    margin: 1rem 0.1rem;
+  }
+
+  .modal {
+    padding: 3rem 3rem 12rem;
+    line-height: 2.5rem;
+  }
 }

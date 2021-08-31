@@ -1,14 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import Modal from '../Modal/Modal';
 import Button from '../Button/Button';
-// import CountdownTimer from '../CountdownTimer/CountdownTimer';
+import CountdownTimer from '../CountdownTimer/CountdownTimer';
 import classes from './Quiz.module.css';
+import OptionContext from '../../store/option-context';
 
 const Quiz = (props) => {
   const [questions, setQuestions] = useState([]);
   let [questionIndex, setQuestionIndex] = useState(0);
   let [numOfCorrectAnswers, setNumOfCorrectAnswers] = useState(0);
+
+  const optCtx = useContext(OptionContext);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -22,7 +26,6 @@ const Quiz = (props) => {
 
       const responseData = await response.json();
 
-      console.log(responseData.results);
       const loadedQuestions = [];
 
       responseData.results.forEach((el) =>
@@ -37,15 +40,6 @@ const Quiz = (props) => {
     fetchQuestions();
   }, [props]);
 
-  // const questionsList = questions.map((question) => (
-  //   <h2
-  //     className={
-  //       classes.question + (trueFalseClass ? `-${trueFalseClass}` : '')
-  //     }
-  //   >
-  //     {question.question}
-  //   </h2>
-  // ));
   const questionsList = questions.map((question) => question.question);
 
   const correctAnswers = questions.map((question) => question.correctAnswer);
@@ -57,14 +51,17 @@ const Quiz = (props) => {
     setQuestionIndex((questionIndex = questionIndex + 1));
   };
 
+  const history = useHistory();
+
+  const goToHomePage = () => {
+    history.push('/');
+  };
+
   return (
     <div
       style={{
         background: `url(${props.imagePath}) no-repeat center center fixed`,
-        backgroundPosition: 'center',
         backgroundSize: '100% 100%',
-        width: '100%',
-        height: '100%',
       }}
     >
       <div className={classes.mainSection}>
@@ -75,13 +72,23 @@ const Quiz = (props) => {
             <Modal>
               <h2>GAME OVER</h2>
               <h4> You had {numOfCorrectAnswers} correct answers!</h4>
+              <div className={classes.buttonsModal}>
+                {/* <Button onButtonClicked={() => resetGame()} text="Play Again" /> */}
+                <Button
+                  onButtonClicked={() => goToHomePage()}
+                  text="Go to HomePage"
+                />
+              </div>
             </Modal>
           )}
         </h1>
 
-        {/* <CountdownTimer
-        getNextQuestion={() => setQuestionIndex(questionIndex + 1)}
-      /> */}
+        <CountdownTimer
+          correctAnswers={numOfCorrectAnswers}
+          secondsLeft={optCtx.difficulty}
+          questionNumber={questionIndex + 1}
+        />
+
         <h2>{questionIndex + 1 < 11 && questionsList[questionIndex]}</h2>
 
         <div className={classes.buttons}>

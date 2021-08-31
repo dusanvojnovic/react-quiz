@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import historyImg from '../assets/history-bg.png';
@@ -10,10 +9,8 @@ import generalImg from '../assets/general-bg.png';
 
 import QuizSections from './QuizSections/QuizSections';
 import Header from './Header/Header';
-import Instructions from '../pages/Instructions/Instructions';
 import Quiz from './Quiz/Quiz';
 import OptionProvider from '../store/OptionProvider';
-// import OptionContext from '../store/option-context';
 
 const App = () => {
   return (
@@ -23,9 +20,6 @@ const App = () => {
         <Switch>
           <Route path="/" exact>
             <QuizSections />
-          </Route>
-          <Route path="/instrucions">
-            <Instructions />
           </Route>
           <Route path="/history">
             <Quiz section="23" imagePath={historyImg} />

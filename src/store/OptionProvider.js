@@ -1,44 +1,35 @@
-import { useReducer } from 'react';
+import { useState } from 'react';
 
 import OptionContext from './option-context';
 
-const defaultState = {
-  secondsLeft: null,
-};
-
-const optionReducer = (state, action) => {
-  if (action.type === 'EASY') {
-    const secRemaining = state.secondsLeft + action.diff;
-    return {
-      secondsLeft: secRemaining,
-    };
-  }
-  return defaultState;
-};
-
 const OptionProvider = (props) => {
-  const [optionState, dispatchOptionAction] = useReducer(
-    optionReducer,
-    defaultState
-  );
+  const [secLeft, setSecLeft] = useState();
 
-  const setDifficultyEasyHandler = (diff) => {
-    dispatchOptionAction({ type: 'EASY', diff: diff });
+  const setDifficultyHandler = (time) => {
+    setSecLeft(time);
   };
 
-  const setDifficultyNormalHandler = (diff) => {
-    dispatchOptionAction({ type: 'NORMAL', diff: diff });
-  };
-
-  const setDifficultyHardHandler = (diff) => {
-    dispatchOptionAction({ type: 'HARD', diff: diff });
-  };
+  // const setPrevDiffHandler = () => {
+  //   switch (optionCtx.prevDiff) {
+  //     case 'easy':
+  //       setSecLeft(60);
+  //       break;
+  //     case 'normal':
+  //       setDifficultyNormalHandler();
+  //       break;
+  //     case 'hard':
+  //       setDifficultyHardHandler();
+  //       break;
+  //     default:
+  //       return;
+  //   }
+  // };
 
   const optionCtx = {
-    difficulty: optionState.secondsLeft,
-    setDifficultyEasy: setDifficultyEasyHandler,
-    setDifficultyNormal: setDifficultyNormalHandler,
-    setDifficultyHard: setDifficultyHardHandler,
+    difficulty: secLeft,
+    // prevDiff: prevDiff,
+    setDifficulty: setDifficultyHandler,
+    // setPrevDiff: setPrevDiffHandler,
   };
 
   return (

@@ -25,19 +25,13 @@
   border-radius: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
-  animation: slide-down 300ms ease-out forwards;
+  animation: slide-down 400ms ease-out forwards;
 }
 
-.buttons {
+/* .buttons {
   display: flex;
   justify-content: space-between;
   padding: 22rem 1rem;
-}
-/* @media (min-width: 768px) {
-  .modal {
-    width: 40rem;
-    left: calc(50% - 20rem);
-  }
 } */
 
 @keyframes slide-down {
@@ -48,5 +42,41 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 40rem) {
+  .modal {
+    width: 80%;
+    left: calc(50% - 52rem);
+  }
+  .content {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .buttonsModal {
+    padding: 7rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .modal {
+    width: 80%;
+    left: calc(50% - 48rem);
+  }
+  .content {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .modal {
+    width: 80%;
+    left: calc(50% - 45rem);
+  }
+  .content {
+    font-size: 1rem;
+    padding: 1rem;
   }
 }

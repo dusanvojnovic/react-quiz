@@ -1,8 +1,3 @@
-p {
-  text-align: center;
-  font-weight: bold;
-}
-
 .cardSectionContainer {
   padding: 15px 40px;
 }
@@ -10,12 +5,11 @@ p {
 .cardImage {
   width: 14rem;
   height: 10rem;
-  /* border: 0.5px solid rgb(87, 92, 92); */
   border-radius: 20px;
+  border: 1px solid #f0e5cf;
 }
 
 .cardImage:hover {
-  /* border-color: rgb(35, 95, 95); */
   box-shadow: 5px grey;
   box-shadow: 3px 7px 4px rgba(0, 0, 0, 0.5);
   animation: move-up 500ms ease-out forwards;
@@ -30,5 +24,19 @@ p {
   }
   100% {
     transform: translateY(-0.3rem);
+  }
+}
+
+@media (max-width: 40rem) {
+  .cardImage {
+    width: 11rem;
+    height: 8rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .cardImage {
+    width: 9rem;
+    height: 7rem;
   }
 }

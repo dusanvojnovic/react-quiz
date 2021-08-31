@@ -9,10 +9,9 @@
 }
 
 .mainSection h2 {
-  /* display: flex; */
   text-align: center;
   padding: 3rem 0.5rem;
-  margin: 9.5rem;
+  margin: 4.5rem;
   font-size: 2.5rem;
   color: rgb(222, 239, 241);
   width: 50%;
@@ -20,47 +19,127 @@
 }
 
 h1 {
-  padding: 2rem;
+  padding: 3rem 3rem 2rem;
 }
-/* 
-.question {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  background-color: rgb(174, 199, 199);
-  border: 4px solid black;
-  padding: 5rem;
-  margin: 4rem;
-  border-radius: 10px;
-  width: 30%;
-  height: 28rem;
-} */
 
 .buttons {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
   margin-right: 16px;
-  width: 35%;
+  width: 33%;
 }
 
-/* .questionFalse {
-  animation: blink-false 500ms;
-  background-color: blue;
+.buttonsModal {
+  display: flex;
+  justify-content: center;
+  padding: 22rem 1rem;
 }
 
-.questionTrue {
-  animation: blink-true 500ms;
-}
+@media (max-width: 40rem) {
+  .buttons {
+    padding: 1rem;
+    margin-right: 12rem;
+  }
 
-@keyframes blink-false {
-  50% {
-    border-color: red;
+  .buttons Button {
+    width: 8rem;
+    height: 3.8rem;
+  }
+
+  .mainSection {
+    padding: 4.6rem;
+  }
+
+  .mainSection h1 {
+    font-size: 1.8rem;
+  }
+
+  .mainSection h2 {
+    text-align: center;
+    padding: 1rem 0.2rem;
+    margin: 4.5rem;
+    font-size: 1.6rem;
+    color: rgb(222, 239, 241);
+    width: 50%;
+    height: 18rem;
   }
 }
 
-@keyframes blink-true {
-  50% {
-    border-color: blue;
+@media (max-width: 30rem) {
+  .buttonsModal {
+    padding: 26rem 1rem;
   }
-} */
+
+  .buttonsModal Button {
+    width: 6.5rem;
+    font-size: 0.8rem;
+  }
+
+  .buttons {
+    padding: 1rem;
+    margin-right: 12rem;
+    margin-top: 1.5rem;
+  }
+
+  .buttons Button {
+    width: 6rem;
+    height: 3.2rem;
+  }
+
+  .mainSection {
+    padding: 4.5rem auto;
+  }
+
+  .mainSection h1 {
+    font-size: 1.3rem;
+  }
+
+  .mainSection h2 {
+    text-align: center;
+    padding: 1rem 0.2rem;
+    margin: 4.5rem;
+    font-size: 1.2rem;
+    color: rgb(222, 239, 241);
+    width: 70%;
+    height: 17rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .buttonsModal {
+    padding: 26rem 1rem;
+  }
+
+  .buttonsModal Button {
+    width: 6.5rem;
+    font-size: 0.8rem;
+  }
+
+  .buttons {
+    padding: 0.5rem;
+    margin-right: 11rem;
+    margin-top: 1rem;
+  }
+
+  .buttons Button {
+    width: 5rem;
+    height: 3.2rem;
+    font-size: 1rem;
+  }
+
+  .mainSection h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .mainSection h2 {
+    text-align: center;
+    padding: 4rem 0.2rem;
+    margin: 4rem;
+    font-size: 1.1rem;
+    color: rgb(222, 239, 241);
+    width: 85%;
+    height: 18.5rem;
+  }
+}

@@ -1,0 +1,22 @@
+.seconds {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.buttonsModal {
+  display: flex;
+  justify-content: center;
+  padding: 22rem 1rem;
+}
+
+@media (max-width: 40rem) {
+  .seconds {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .seconds {
+    font-size: 1.4rem;
+  }
+}

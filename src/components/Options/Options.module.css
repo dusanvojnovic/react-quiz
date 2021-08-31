@@ -1,11 +1,48 @@
 .buttons {
-  /* display: grid;
-  align-items: center;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px 30px; */
   padding: 0.5rem 48rem;
   display: flex;
-  align-items: center;
   justify-content: center;
   margin: 1rem 1rem;
+}
+
+.buttons Button {
+  width: 7rem;
+  height: 3rem;
+}
+
+.buttons Button:focus {
+  background-color: #4b6587;
+  color: #f0e5cf;
+}
+
+@media (max-width: 40rem) {
+  .buttons {
+    padding: 0.5rem 17rem;
+  }
+
+  .buttons Button {
+    width: 6rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .buttons {
+    padding: 0.1rem 12rem;
+  }
+
+  .buttons Button {
+    width: 5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .buttons {
+    padding: 0.1rem;
+    margin-right: 1rem;
+  }
+
+  .buttons Button {
+    width: 4rem;
+    font-size: 0.8rem;
+  }
 }
