@@ -1,12 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
 
-import historyImg from '../assets/history-bg.png';
-import geographyImg from '../assets/geography-bg.png';
-import sportImg from '../assets/sport-bg.png';
-import moviesImg from '../assets/movies-bg.png';
-import musicImg from '../assets/music-bg.png';
-import generalImg from '../assets/general-bg.png';
-
 import QuizSections from './QuizSections/QuizSections';
 import Header from './Header/Header';
 import Quiz from './Quiz/Quiz';
@@ -22,22 +15,22 @@ const App = () => {
             <QuizSections />
           </Route>
           <Route path="/history">
-            <Quiz section="23" imagePath={historyImg} />
+            <Quiz section="23" bgColor="#8272AA" />
           </Route>
           <Route path="/geography">
-            <Quiz section="22" imagePath={geographyImg} />
+            <Quiz section="22" bgColor="#97BF9D" />
           </Route>
           <Route path="/sport">
-            <Quiz section="21" imagePath={sportImg} />
+            <Quiz section="21" bgColor="#9E9E9E" />
           </Route>
           <Route path="/movies">
-            <Quiz section="11" imagePath={moviesImg} />
+            <Quiz section="11" bgColor="#CCBB75" />
           </Route>
           <Route path="/music">
-            <Quiz section="12" imagePath={musicImg} />
+            <Quiz section="12" bgColor="#B27676" />
           </Route>
           <Route path="/general">
-            <Quiz section="9" imagePath={generalImg} />
+            <Quiz section="9" bgColor="#93B7BC" />
           </Route>
         </Switch>
       </OptionProvider>

@@ -27,9 +27,11 @@ const CountdownTimer = ({ correctAnswers, secondsLeft, questionNumber }) => {
   }, [secondsRemaining]);
 
   return (
-    <div className={classes.seconds}>
-      {secondsRemaining < 10 && <p>0{secondsRemaining}</p>}
-      {secondsRemaining >= 10 && <p>{secondsRemaining}</p>}
+    <>
+      <div className={classes.seconds}>
+        {secondsRemaining < 10 && <p>0{secondsRemaining}</p>}
+        {secondsRemaining >= 10 && <p>{secondsRemaining}</p>}
+      </div>
       {showModal && questionNumber < 11 && (
         <Modal>
           <h2>TIME IS UP!</h2>
@@ -42,7 +44,7 @@ const CountdownTimer = ({ correctAnswers, secondsLeft, questionNumber }) => {
           </div>
         </Modal>
       )}
-    </div>
+    </>
   );
 };
 

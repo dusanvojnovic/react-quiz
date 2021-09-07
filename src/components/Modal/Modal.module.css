@@ -28,12 +28,6 @@
   animation: slide-down 400ms ease-out forwards;
 }
 
-/* .buttons {
-  display: flex;
-  justify-content: space-between;
-  padding: 22rem 1rem;
-} */
-
 @keyframes slide-down {
   from {
     opacity: 0;
@@ -45,38 +39,24 @@
   }
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 480px) and (max-height: 768px) {
   .modal {
-    width: 80%;
-    left: calc(50% - 52rem);
+    width: 75%;
+    left: calc(65% - 48rem);
   }
   .content {
-    font-size: 1.5rem;
-    padding: 1rem;
-  }
-  .buttonsModal {
-    padding: 7rem;
+    font-size: 110%;
+    padding: 6%;
   }
 }
 
-@media (max-width: 30rem) {
+@media (max-width: 320px) {
   .modal {
     width: 80%;
-    left: calc(50% - 48rem);
+    left: calc(50% - 44rem);
   }
   .content {
-    font-size: 1rem;
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width: 375px) {
-  .modal {
-    width: 80%;
-    left: calc(50% - 45rem);
-  }
-  .content {
-    font-size: 1rem;
-    padding: 1rem;
+    font-size: 100%;
+    padding: 8%;
   }
 }

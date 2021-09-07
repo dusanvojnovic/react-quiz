@@ -81,11 +81,11 @@ const QuizSections = () => {
               <h3>
                 Please, first select difficulty level, and then choose section!{' '}
               </h3>
+              <Button
+                onButtonClicked={() => setOpenModal(false)}
+                text="Go to Home Page"
+              ></Button>
             </div>
-            <Button
-              onButtonClicked={() => setOpenModal(false)}
-              text="Go to Home Page"
-            ></Button>
           </Modal>
         )}
       </div>

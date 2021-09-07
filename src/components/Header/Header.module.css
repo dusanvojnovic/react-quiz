@@ -41,27 +41,13 @@
   text-align: center;
 }
 
-@media (max-width: 40rem) {
-  .instructions {
-    padding: 3.5rem 2rem;
-  }
-}
-
-@media (max-width: 30rem) {
-  .instructions {
-    line-height: 3rem;
-    padding: 2rem;
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 375px) {
+@media (max-width: 480px) and (max-height: 768px) {
   .header {
-    font-size: 0.8rem;
+    font-size: 75%;
   }
   .instructions {
-    line-height: 2.8rem;
-    font-size: 1.2rem;
-    padding: 1.4rem;
+    line-height: 1.5rem;
+    font-size: 120%;
+    padding: 4%;
   }
 }

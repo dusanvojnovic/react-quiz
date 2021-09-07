@@ -9,14 +9,32 @@
   padding: 22rem 1rem;
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 480px) {
   .seconds {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .buttonsModal {
+    padding: 26rem 1rem;
+  }
+
+  .buttonsModal Button {
+    width: 6.5rem;
+    font-size: 0.8rem;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 320px) {
   .seconds {
     font-size: 1.4rem;
+  }
+
+  .buttonsModal {
+    padding: 26rem 1rem;
+  }
+
+  .buttonsModal Button {
+    width: 5.2rem;
+    font-size: 0.7rem;
   }
 }

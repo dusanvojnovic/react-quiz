@@ -1,6 +1,8 @@
 import { useState, useEffect, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 
+import { decode } from 'html-entities';
+
 import Modal from '../Modal/Modal';
 import Button from '../Button/Button';
 import CountdownTimer from '../CountdownTimer/CountdownTimer';
@@ -40,7 +42,7 @@ const Quiz = (props) => {
     fetchQuestions();
   }, [props]);
 
-  const questionsList = questions.map((question) => question.question);
+  const questionsList = questions.map((question) => decode(question.question));
 
   const correctAnswers = questions.map((question) => question.correctAnswer);
 
@@ -60,8 +62,9 @@ const Quiz = (props) => {
   return (
     <div
       style={{
-        background: `url(${props.imagePath}) no-repeat center center fixed`,
-        backgroundSize: '100% 100%',
+        // background: `url(${props.imagePath}) no-repeat center center fixed`,
+        // backgroundSize: '100% 100%',
+        backgroundColor: `${props.bgColor}`,
       }}
     >
       <div className={classes.mainSection}>
@@ -73,7 +76,6 @@ const Quiz = (props) => {
               <h2>GAME OVER</h2>
               <h4> You had {numOfCorrectAnswers} correct answers!</h4>
               <div className={classes.buttonsModal}>
-                {/* <Button onButtonClicked={() => resetGame()} text="Play Again" /> */}
                 <Button
                   onButtonClicked={() => goToHomePage()}
                   text="Go to HomePage"
