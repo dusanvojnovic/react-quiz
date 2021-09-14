@@ -60,21 +60,19 @@ const Quiz = (props) => {
   };
 
   return (
-    <div
-      style={{
-        // background: `url(${props.imagePath}) no-repeat center center fixed`,
-        // backgroundSize: '100% 100%',
-        backgroundColor: `${props.bgColor}`,
-      }}
-    >
+    <div>
       <div className={classes.mainSection}>
         <h1>
           {questionIndex + 1 < 11 ? (
             `Question number ${questionIndex + 1}`
           ) : (
             <Modal>
-              <h2>GAME OVER</h2>
-              <h4> You had {numOfCorrectAnswers} correct answers!</h4>
+              <h3>GAME OVER</h3>
+              <h3>
+                {' '}
+                You had {numOfCorrectAnswers} correct{' '}
+                {numOfCorrectAnswers > 1 ? 'answers!' : 'answer!'}
+              </h3>
               <div className={classes.buttonsModal}>
                 <Button
                   onButtonClicked={() => goToHomePage()}

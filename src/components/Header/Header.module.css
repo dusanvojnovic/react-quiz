@@ -4,8 +4,7 @@
   left: 0;
   width: 100%;
   height: 3rem;
-  background-color: #4b6587;
-  color: white;
+  background-color: #ffe194;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,40 +13,71 @@
 
 .brand {
   text-decoration: none;
-  color: white;
-}
-
-.brand:hover {
-  color: #f0e5cf;
-}
-
-.navbarButton {
-  color: white;
-  background-color: transparent;
-  border-color: transparent;
-  font-size: inherit;
-  font: inherit;
-  font-weight: bold;
-  font-size: 1.17em;
-}
-
-.navbarButton:hover {
-  cursor: pointer;
+  color: #4c4c6d;
 }
 
 .instructions {
   padding: 1rem 2rem;
   line-height: 2.5rem;
   text-align: center;
+  color: #4c4c6d;
 }
 
-@media (max-width: 480px) and (max-height: 768px) {
+.instructions h3 {
+  padding: 7rem;
+  font-weight: bold;
+}
+
+.options {
+  line-height: 0.1rem;
+  padding: 5rem auto;
+}
+
+.options h6 {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
   .header {
-    font-size: 75%;
+    font-size: 70%;
+    padding: 1rem;
   }
   .instructions {
-    line-height: 1.5rem;
+    line-height: 145%;
     font-size: 120%;
-    padding: 4%;
+    padding: 2%;
+  }
+
+  .instructions h3 {
+    padding: 30% 2.5rem;
+    font-weight: bold;
+    font-size: 110%;
+  }
+
+  .options {
+    line-height: 0.3rem;
+  }
+
+  .options h6 {
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) and (max-height: 640px) and (min-height: 480px) {
+  .header {
+    font-size: 60%;
+    height: 2.5rem;
+  }
+
+  .instructions h3 {
+    padding: 15% 2.5rem;
+    font-weight: bold;
+    font-size: 110%;
+  }
+}
+
+@media (max-width: 320px) and (max-height: 568px) {
+  .header {
+    width: 100%;
   }
 }

@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap'); */
 * {
   box-sizing: border-box;
 }
 
 html {
-  background-color: #f7f6f2;
-  font-family: 'Montserrat', 'Verdana', sans-serif;
+  background-color: #e8f6ef;
+  font-family: 'Radikal Black', 'Montserrat', 'Verdana';
   font-size: 1rem;
 }

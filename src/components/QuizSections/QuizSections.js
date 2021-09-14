@@ -8,24 +8,17 @@ import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
 import OptionContext from '../../store/option-context';
 
-import history from '../../assets/history.png';
-import general from '../../assets/general.png';
-import geography from '../../assets/geography.png';
-import movies from '../../assets/movies.png';
-import music from '../../assets/music.png';
-import sport from '../../assets/sport.png';
-
 const QuizSections = () => {
   const optionCtx = useContext(OptionContext);
   const [openModal, setOpenModal] = useState(false);
 
   const sections = [
-    { img: history, str: '/history' },
-    { img: general, str: '/general' },
-    { img: geography, str: '/geography' },
-    { img: movies, str: '/movies' },
-    { img: music, str: '/music' },
-    { img: sport, str: '/sport' },
+    'history',
+    'general knowledge',
+    'geography',
+    'music',
+    'sport',
+    'movies',
   ];
 
   const clickOnLink = (event) => {
@@ -35,11 +28,12 @@ const QuizSections = () => {
 
   const sectionList = sections.map((section) => (
     <Link
-      key={section.str}
-      to={section.str}
+      key={section}
+      to={`/${section}`}
       onClick={(event) => !optionCtx.difficulty && clickOnLink(event)}
+      style={{ textDecoration: 'none' }}
     >
-      <SectionCard imagePath={section.img} />
+      <SectionCard sectionName={section} />
     </Link>
   ));
 
@@ -50,27 +44,6 @@ const QuizSections = () => {
       </div>
       <Options />
       <div className={classes.sections}>
-        {/* <Link
-          to="/history"
-          onClick={(event) => !optionCtx.difficulty && clickOnLink(event)}
-        >
-          <SectionCard imagePath={history} />
-        </Link>
-        <Link to="/general">
-          <SectionCard imagePath={general} />
-        </Link>
-        <Link to="/geography">
-          <SectionCard imagePath={geography} />
-        </Link>
-        <Link to="/music">
-          <SectionCard imagePath={music} />
-        </Link>
-        <Link to="/sport">
-          <SectionCard imagePath={sport} />
-        </Link>
-        <Link to="/movies">
-          <SectionCard imagePath={movies} />
-        </Link> */}
         {sectionList}
         {openModal && (
           <Modal

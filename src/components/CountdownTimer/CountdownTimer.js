@@ -34,8 +34,12 @@ const CountdownTimer = ({ correctAnswers, secondsLeft, questionNumber }) => {
       </div>
       {showModal && questionNumber < 11 && (
         <Modal>
-          <h2>TIME IS UP!</h2>
-          <h4> You had {correctAnswers} correct answers!</h4>
+          <h5>TIME IS UP!</h5>
+          <h3>
+            {' '}
+            You had {correctAnswers} correct{' '}
+            {correctAnswers > 1 ? 'answers!' : 'answer!'}
+          </h3>
           <div className={classes.buttonsModal}>
             <Button
               onButtonClicked={() => goToHomePage()}

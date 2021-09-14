@@ -15,22 +15,22 @@ const App = () => {
             <QuizSections />
           </Route>
           <Route path="/history">
-            <Quiz section="23" bgColor="#8272AA" />
+            <Quiz section="23" />
           </Route>
           <Route path="/geography">
-            <Quiz section="22" bgColor="#97BF9D" />
+            <Quiz section="22" />
           </Route>
           <Route path="/sport">
-            <Quiz section="21" bgColor="#9E9E9E" />
+            <Quiz section="21" />
           </Route>
           <Route path="/movies">
-            <Quiz section="11" bgColor="#CCBB75" />
+            <Quiz section="11" />
           </Route>
           <Route path="/music">
-            <Quiz section="12" bgColor="#B27676" />
+            <Quiz section="12" />
           </Route>
-          <Route path="/general">
-            <Quiz section="9" bgColor="#93B7BC" />
+          <Route path="/general knowledge">
+            <Quiz section="9" />
           </Route>
         </Switch>
       </OptionProvider>

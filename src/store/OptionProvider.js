@@ -9,27 +9,9 @@ const OptionProvider = (props) => {
     setSecLeft(time);
   };
 
-  // const setPrevDiffHandler = () => {
-  //   switch (optionCtx.prevDiff) {
-  //     case 'easy':
-  //       setSecLeft(60);
-  //       break;
-  //     case 'normal':
-  //       setDifficultyNormalHandler();
-  //       break;
-  //     case 'hard':
-  //       setDifficultyHardHandler();
-  //       break;
-  //     default:
-  //       return;
-  //   }
-  // };
-
   const optionCtx = {
     difficulty: secLeft,
-    // prevDiff: prevDiff,
     setDifficulty: setDifficultyHandler,
-    // setPrevDiff: setPrevDiffHandler,
   };
 
   return (
