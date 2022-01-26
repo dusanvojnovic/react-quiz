@@ -4,7 +4,7 @@ const SectionCard = (props) => {
   return (
     <div className={classes.cardSectionContainer}>
       <div className={classes.card} style={{ 'text-decoration': 'none' }}>
-        {props.sectionName}
+        <p>{props.sectionName}</p>
       </div>
     </div>
   );

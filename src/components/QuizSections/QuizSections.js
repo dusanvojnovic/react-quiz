@@ -43,25 +43,23 @@ const QuizSections = () => {
         <h1>Welcome to my stupid quiz, choose level and section!</h1>
       </div>
       <Options />
-      <div className={classes.sections}>
-        {sectionList}
-        {openModal && (
-          <Modal
-            className={classes.modal}
-            goToHomePage={() => setOpenModal(false)}
-          >
-            <div className={classes.modal}>
-              <h3>
-                Please, first select difficulty level, and then choose section!{' '}
-              </h3>
-              <Button
-                onButtonClicked={() => setOpenModal(false)}
-                text="Go to Home Page"
-              ></Button>
-            </div>
-          </Modal>
-        )}
-      </div>
+      <div className={classes.sections}>{sectionList}</div>
+      {openModal && (
+        <Modal
+          className={classes.modal}
+          goToHomePage={() => setOpenModal(false)}
+        >
+          <div className={classes.modal}>
+            <h3>
+              Please, first select difficulty level, and then choose section!{' '}
+            </h3>
+            <Button
+              onButtonClicked={() => setOpenModal(false)}
+              text="Go to Home Page"
+            ></Button>
+          </div>
+        </Modal>
+      )}
     </>
   );
 };
