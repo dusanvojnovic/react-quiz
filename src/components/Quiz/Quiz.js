@@ -66,19 +66,22 @@ const Quiz = (props) => {
           {questionIndex + 1 < 11 ? (
             `Question number ${questionIndex + 1}`
           ) : (
-            <Modal>
-              <h3>GAME OVER</h3>
+            <Modal
+              header="GAME OVER"
+              footer={
+                <div className={classes.buttonsModal}>
+                  <Button
+                    onButtonClicked={() => goToHomePage()}
+                    text="Home Page"
+                  />
+                </div>
+              }
+            >
               <h3>
                 {' '}
                 You had {numOfCorrectAnswers} correct{' '}
                 {numOfCorrectAnswers > 1 ? 'answers!' : 'answer!'}
               </h3>
-              <div className={classes.buttonsModal}>
-                <Button
-                  onButtonClicked={() => goToHomePage()}
-                  text="Go to HomePage"
-                />
-              </div>
             </Modal>
           )}
         </h1>

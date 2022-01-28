@@ -2,13 +2,11 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  align-self: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem 10rem;
   text-decoration: none;
   margin: 6rem auto;
   padding: 0 20rem;
-  object-fit: cover;
 }
 
 .sections > * {
@@ -21,20 +19,24 @@
   font-size: 1.5rem;
   color: #4c4c6d;
   width: 50%;
-  margin: 3rem auto;
+  margin: 6rem auto;
   line-height: 4.5rem;
 }
 
 .modal {
-  padding: 6rem 1rem;
+  padding: 4rem 1rem;
   line-height: 4rem;
   color: #4c4c6d;
 }
 
-.modal Button {
-  margin-top: 8rem;
-  background-color: #4c4c6d;
-  color: #b8dfd8;
+.modal h3 {
+  padding-bottom: 5rem;
+}
+@media only screen and (max-width: 68.75em) {
+  .sections {
+    grid-template-columns: repeat(2, min-content);
+    gap: 4rem 10rem;
+  }
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -45,7 +47,7 @@
   }
 
   .title {
-    margin: 5rem auto;
+    margin: 8rem auto;
     margin-bottom: 2rem;
     line-height: 3.5rem;
     width: 75%;
@@ -54,38 +56,12 @@
 
 @media only screen and (max-width: 31.25em) {
   .sections {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .title {
-    margin: 5rem auto;
-    margin-bottom: 2rem;
     width: 90%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 3rem;
   }
 }
-
-/* @media (max-width: 420px) {
-  .title {
-    font-size: 55%;
-    line-height: 2rem;
-    width: 100%;
-    padding: 1rem 1rem 0;
-    margin: 3% auto;
-  }
-
-  .sections {
-    display: grid;
-    grid-template-columns: repeat(2, 105px);
-    grid-template-rows: repeat(3, 100px);
-    justify-content: space-around;
-    grid-gap: 10% 15%;
-    padding: 3rem;
-  }
-
-  .modal {
-    padding: 3rem 2rem;
-    line-height: 3rem;
-  }
-} */

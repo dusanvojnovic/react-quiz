@@ -33,18 +33,19 @@ const CountdownTimer = ({ correctAnswers, secondsLeft, questionNumber }) => {
         {secondsRemaining >= 10 && <p>{secondsRemaining}</p>}
       </div>
       {showModal && questionNumber < 11 && (
-        <Modal>
-          <h5>TIME IS UP!</h5>
-          <h3>
-            {' '}
-            You had {correctAnswers} correct{' '}
-            {correctAnswers > 1 ? 'answers!' : 'answer!'}
-          </h3>
-          <div className={classes.buttonsModal}>
-            <Button
-              onButtonClicked={() => goToHomePage()}
-              text="Go to HomePage"
-            />
+        <Modal
+          header="TIME IS UP!"
+          footer={
+            <div className={classes.buttonsModal}>
+              <Button onButtonClicked={() => goToHomePage()} text="Home Page" />
+            </div>
+          }
+        >
+          <div className={classes.modalContent}>
+            <h3>
+              You had {correctAnswers} correct{' '}
+              {correctAnswers > 1 ? 'answers!' : 'answer!'}
+            </h3>
           </div>
         </Modal>
       )}

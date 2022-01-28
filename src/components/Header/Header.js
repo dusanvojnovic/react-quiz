@@ -26,17 +26,19 @@ const Header = (props) => {
         </Link>
       </header>
       {openModal && (
-        <Modal goToHomePage={closeModalHandler}>
-          <div className={classes.instructions}>
-            <div>
-              <h5>Choose level between</h5>
-              <div className={classes.options}>
-                <h6>easy (60 seconds)</h6>
-                <h6>normal (45 seconds)</h6>
-                <h6>hard (30 seconds)</h6>
-              </div>
-              <h5>then choose section and test your knowledge.</h5>
-              <h3>Good luck!</h3>
+        <Modal
+          goToHomePage={closeModalHandler}
+          header="Choose level"
+          footer="Good luck!"
+        >
+          <div className={classes.options}>
+            <div className={classes.content}>
+              <ul className={classes.optionsList}>
+                <li>easy (60 seconds)</li>
+                <li>normal (45 seconds)</li>
+                <li>hard (30 seconds)</li>
+              </ul>
+              <p>then choose section and test your knowledge</p>
             </div>
           </div>
         </Modal>

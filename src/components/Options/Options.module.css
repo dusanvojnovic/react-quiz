@@ -6,8 +6,8 @@
 }
 
 .buttons Button {
-  width: 7rem;
-  height: 3rem;
+  width: 8rem;
+  height: 3.5rem;
   background-color: #b8dfd8;
   color: #4c4c6d;
   font-weight: bold;
@@ -16,15 +16,4 @@
 
 .buttons Button:focus {
   background-color: #ffe194;
-}
-
-@media (max-width: 420px) {
-  .buttons {
-    padding: 0;
-  }
-  .buttons Button {
-    width: 4rem;
-    height: 2.5rem;
-    font-size: 0.7rem;
-  }
 }

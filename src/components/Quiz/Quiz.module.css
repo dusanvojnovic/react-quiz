@@ -3,93 +3,67 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: auto;
-  padding: 3rem;
+  padding-top: 6rem;
   color: #4c4c6d;
-  font-size: 1rem;
 }
 
 .mainSection h2 {
   text-align: center;
-  padding: 1rem 0.5rem;
-  margin: 4.5rem;
+  margin: 7rem;
   font-size: 2.5rem;
   width: 50%;
   height: 18rem;
   color: #4c4c6d;
 }
 
-h1 {
-  padding: 2rem 3rem 1rem;
-}
-
 .buttons {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  width: 33%;
-}
-
-.buttons Button {
-  background-color: #4c4c6d;
-  color: #b8dfd8;
+  align-items: center;
+  width: 30%;
 }
 
 .buttonsModal {
-  display: flex;
-  justify-content: center;
-  padding-top: 16rem;
+  padding-top: 12rem;
 }
 
-.buttonsModal Button {
-  background-color: #4c4c6d;
-  color: #b8dfd8;
-}
-
-@media (max-width: 420px) {
-  .mainSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    padding: 3rem auto 0;
-    color: #4c4c6d;
-    font-size: 1rem;
-  }
-
-  .mainSection h1 {
-    font-size: 1.2rem;
-    text-align: center;
-    padding: 2rem 0.5rem;
-    width: 100%;
-  }
-
+@media only screen and (max-width: 68.75em) {
   .mainSection h2 {
-    height: 10rem;
-    text-align: center;
-    padding: 2rem 0.2rem;
-    margin: 1rem;
-    font-size: 115%;
-    color: rgb(222, 239, 241);
-    width: 85%;
-    color: #4c4c6d;
+    margin: 6rem auto;
+    width: 50%;
   }
 
   .buttons {
-    padding: 30%;
-    align-items: center;
-    justify-content: center;
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .mainSection h2 {
+    margin: 4rem auto 10rem;
+    width: 60%;
+    height: 12rem;
   }
 
-  .buttons Button {
-    font-size: 0.8rem;
-    height: 3rem;
+  .buttons {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .mainSection h2 {
+    margin: 8rem auto;
+    width: 60%;
+    font-size: 2rem;
   }
 
-  .buttonsModal {
-    display: flex;
-    justify-content: center;
-    padding-top: 10rem;
+  .buttons {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .buttons {
+    width: 70%;
   }
 }

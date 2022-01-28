@@ -3,44 +3,14 @@
   font-weight: bold;
 }
 
+.modalContent {
+  padding: 2rem;
+}
+
+.modalContent h3 {
+  padding: 2rem;
+}
+
 .buttonsModal {
-  display: flex;
-  justify-content: center;
-  padding-top: 16rem;
+  padding: 2rem;
 }
-
-.buttonsModal Button {
-  background-color: #4c4c6d;
-  color: #b8dfd8;
-}
-
-@media (max-width: 420px) {
-  .seconds {
-    font-size: 1.2rem;
-  }
-
-  .buttonsModal {
-    padding-top: 15rem;
-  }
-}
-
-@media (max-width: 320px) {
-  .buttonsModal {
-    padding-top: 12rem;
-  }
-}
-
-/* @media (max-width: 320px) and (min-height: 480px) and (max-height: 568px) {
-  .seconds {
-    font-size: 1rem;
-  }
-
-  .buttonsModal {
-    padding-top: 50%;
-  }
-
-  .buttonsModal Button {
-    width: 5.2rem;
-    font-size: 0.6rem;
-  }
-} */

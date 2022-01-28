@@ -11,7 +11,11 @@ const Backdrop = (props) => {
 const ModalOverlay = (props) => {
   return (
     <div className={classes.modal}>
+      <header className={classes.modalHeader}>
+        <h2>{props.header}</h2>
+      </header>
       <div className={classes.content}>{props.children}</div>
+      <footer className={classes.modalFooter}>{props.footer}</footer>
     </div>
   );
 };
@@ -31,10 +35,7 @@ const Modal = (props) => {
         <Backdrop goToHomePage={props.goToHomePage || goToHomePage} />,
         portalElement
       )}
-      {ReactDOM.createPortal(
-        <ModalOverlay>{props.children}</ModalOverlay>,
-        portalElement
-      )}
+      {ReactDOM.createPortal(<ModalOverlay {...props} />, portalElement)}
     </Fragment>
   );
 };

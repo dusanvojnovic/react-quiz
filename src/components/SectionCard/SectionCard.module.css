@@ -18,6 +18,15 @@
   align-items: center;
 }
 
+.card:hover {
+  box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.5);
+  animation: move-up 500ms ease-out forwards;
+}
+
+p {
+  padding: 3rem;
+}
+
 @media only screen and (max-width: 56.25em) {
   .cardSectionContainer {
     width: 18rem;
@@ -31,15 +40,6 @@
   }
 }
 
-p {
-  padding: 3rem;
-}
-
-.card:hover {
-  box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.5);
-  animation: move-up 500ms ease-out forwards;
-}
-
 @keyframes move-up {
   0% {
     transform: translateY(0);
@@ -51,14 +51,3 @@ p {
     transform: translateY(-0.3rem);
   }
 }
-
-/* @media (max-width: 420px) {
-  .cardSectionContainer {
-    padding: 0;
-  }
-  .card {
-    width: 10%;
-    height: 5.5rem;
-    font-size: 0.8rem;
-  }
-} */
